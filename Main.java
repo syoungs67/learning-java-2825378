@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
         int age = 15;
@@ -8,9 +10,13 @@ public class Main {
 
         System.out.println(age);
         System.out.println(gpa);
-        System.out.println(fName.charAt(0));
-        System.out.println(lName.charAt(0));
         System.out.println(perfectAttendance);
-        System.out.println(String.join(" ", fName, lName));
+        System.out.println(fName + ' ' + lName + " has a GPA of " + gpa);
+
+        Scanner input = new Scanner(System.in);
+        gpa = input.nextDouble();
+        input.close();
+
+        System.out.println(fName + ' ' + lName + " has a GPA of " + gpa);
     }
 }
